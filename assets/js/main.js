@@ -1,12 +1,28 @@
 window.addEventListener('load', function () {
     const homeSection = document.getElementById('home');
+    const header = document.querySelector('header'); // Assuming <header> contains your header
+
     if (homeSection) {
-        homeSection.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start' // Align it to the top
-        });
+        // Check if the device is mobile
+        const isMobile = window.innerWidth <= 768;
+
+        if (!isMobile) {
+            homeSection.scrollIntoView({
+                behavior: 'smooth', // Smooth scroll
+                block: 'start'      // Align it to the top
+            });
+        }
+
+        if (isMobile) {
+            // Get the height of the header
+            const headerHeight = header.offsetHeight;
+            // Apply the header's height as padding-top to #home
+            homeSection.style.paddingTop = headerHeight + 5 + 'px';
+        }
     }
+
 });
+
 
 // Add active class to the clicked link
 const navLinks = document.querySelectorAll('nav ul li a');

@@ -124,7 +124,7 @@ footer {
         text-align: center;
         background-color: #070553;
         position: absolute;
-        top: 60px;
+        top: 0px;
         left: 0;
         padding: 10px 0;
     }
@@ -136,7 +136,7 @@ footer {
     nav .hamburger {
         display: block; /* Show the hamburger on small screens */
         position: absolute;
-        top: 20px;
+        top: -125px;
         right: 20px; /* Position hamburger at the top-right */
     }
 
@@ -147,5 +147,9 @@ footer {
     nav ul li a {
         font-size: 1.5rem;
         padding: 12px 20px; /* Make links more clickable on mobile */
+    }
+
+    #home , #about, #contact {
+        padding-top: 50px;
     }
 }
