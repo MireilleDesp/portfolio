@@ -1,0 +1,151 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    overflow-x: hidden;
+}
+
+header {
+    background-color: #070553;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 10px;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    background-color: #00bfff; /* Highlight color for active link */
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow on hover */
+}
+
+nav .hamburger {
+    display: none;
+    cursor: pointer;
+    font-size: 2rem;
+    color: #fff;
+    position: relative;
+    top: 0px;
+    right: 20px;
+}
+
+/* Section styling */
+section {
+    min-height: 100vh;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Call to Action button styling */
+.cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background: linear-gradient(135deg, #00bfff, #0073e6); /* Gradient background */
+    color: #fff;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s ease, background 0.3s ease, box-shadow 0.2s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-button:hover {
+    transform: translateY(-3px); /* Lift the button slightly */
+    background: linear-gradient(135deg, #0073e6, #00bfff); /* Reverse the gradient */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4); /* Enhance the shadow */
+}
+
+.cta-button:hover::after {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    font-size: 1.2rem;
+    opacity: 0;
+    animation: bounce 0.6s ease forwards; /* Emoji bounce effect */
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #333;
+    color: #fff;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        background-color: #070553;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        padding: 10px 0;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    nav .hamburger {
+        display: block; /* Show the hamburger on small screens */
+        position: absolute;
+        top: 20px;
+        right: 20px; /* Position hamburger at the top-right */
+    }
+
+    nav ul.active {
+        display: flex; /* Show the menu when active */
+    }
+
+    nav ul li a {
+        font-size: 1.5rem;
+        padding: 12px 20px; /* Make links more clickable on mobile */
+    }
+}

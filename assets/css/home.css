@@ -1,0 +1,78 @@
+#home {
+    background: linear-gradient(135deg, #070553, #1d4f91); /* A subtle gradient with your existing blue tones */
+    color: white;
+    text-align: center;
+    padding: 40px 20px; /* Increase padding for breathing room */
+    position: relative;
+    overflow: hidden;
+}
+
+#home img {
+    max-width: 200px;
+    height: auto;
+    border-radius: 50%; /* Circular profile picture */
+    margin-bottom: 20px;
+    border: 5px solid #fff; /* White border for contrast */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Subtle depth effect */
+    transition: transform 0.3s ease-in-out;
+}
+
+#home {
+    background-attachment: fixed;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+#home img:hover {
+    transform: scale(1.05); /* Gentle zoom effect on hover */
+}
+
+#home h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+#home p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 0 auto 20px auto;
+    color: #dbe6ff; /* Softer text for contrast */
+}
+
+
+
+@keyframes bounce {
+    0% {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    50% {
+        transform: translateY(-10px);
+        opacity: 0.5;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+/* Optional background effect */
+#home::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background: url('../../images/dark-blue-background.jpeg') center/cover no-repeat; */
+    /* opacity: 0.15;  */
+    z-index: 0;
+    /* filter: blur(5px); */
+}

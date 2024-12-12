@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mireille DESPREZ Portfolio</title>
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <link rel="stylesheet" href="./assets/css/home.css" />
+    <link rel="stylesheet" href="./assets/css/projects.css" />
+    <link rel="stylesheet" href="./assets/css/about.css" />
+    <link rel="stylesheet" href="./assets/css/contact.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Bienvenue dans mon portfolio</h1>
+        <nav>
+            <div class="hamburger" id="hamburger-menu">
+                <i class="fa fa-bars"></i>
+            </div>
+            <ul id="nav-links">
+                <li><a href="#home"><i class="fa fa-home"></i></a></li>
+                <li><a href="#about"><i class="fa fa-user"></i></a></li>
+                <li><a href="#projects"><i class="fa fa-briefcase"></i></a></li>
+                <li><a href="#contact"><i class="fa fa-envelope"></i></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <div class="content-container">
+            <img src="./images/profile-picture.png" alt="Profile Picture">
+            <h1>Dr. Desprez</h1>
+            <p>
+                Titulaire d'un doctorat en informatique et applications et forte de plus de sept ans d'expérience
+                dans des environnements professionnels et académiques, je dispose d'une expertise approfondie
+                dans la conception et le développement de logiciels performants.
+            </p>
+            <a href="./material/Mireille DESPREZ CV.pdf" class="cta-button" download target="_self">Download My CV</a>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="about-content">
+            <h2>À Propos de Moi</h2>
+            <p>
+                Docteure en informatique avec plus de sept ans d'expérience professionnelle et académique. J'ai
+                travaillé sur des projets allant de l'intelligence artificielle impulsionnelle à des solutions IoT
+                interactives.
+            </p>
+            <div class="tabs">
+                <button class="tab-button active" data-tab="highlights">Highlights</button>
+                <button class="tab-button" data-tab="publications">Publications</button>
+            </div>
+            <div class="tab-content" id="highlights">
+                <!-- Highlights Content -->
+                <div class="highlight">
+                    <p><i class="fas fa-graduation-cap"></i>&nbsp;<strong>Doctorat en Informatique et
+                            applications</strong><br>Université de Lille</p>
+                </div>
+                <div class="highlight">
+                    <p><i class="fas fa-briefcase"></i>&nbsp;<strong>Expérience Variée</strong><br>IA, R&D,
+                        Développement Web, Enseignement</p>
+                </div>
+                <div class="highlight">
+                    <p><i class="fas fa-award"></i>&nbsp;<strong>Prix</strong><br>Prix du Fondateur AUST (Majore de
+                        promotion)<br>Prix du meilleur papier (CORESA 2023)</p>
+                </div>
+                <div class="highlight">
+                    <p><i class="fas fa-award"></i>&nbsp;<strong>Langues</strong><br>Français (C2) &emsp;&emsp;
+                        Anglais (C2) &emsp;&emsp; Arabe (C2)</p>
+                </div>
+            </div>
+            <div class="tab-content hidden" id="publications">
+                <div class="publication-list">
+                    <div class="publication-item">
+                        <a href="https://theses.fr/2024ULILB002" class="cta-link">
+                            <h4>Apprentissage non supervisé basé sur le STDP pour l’analyse vidéo avec des réseaux
+                                neuronaux impulsionnels</h4>
+                        </a>
+                        <p>Rapport de thèse</p>
+                    </div>
+                    <div class="publication-item">
+                        <a href="https://arxiv.org/abs/2309.12761" class="cta-link">
+                            <h4>S3TC: Spiking Separated Spatial and Temporal Convolutions with Unsupervised STDP-based
+                                Learning for Action Recognition</h4>
+                        </a>
+                        <p>ICPR 2024</p>
+                    </div>
+                    <div class="publication-item">
+                        <a href="https://arxiv.org/abs/2306.13783" class="cta-link">
+                            <h4>Spiking Two-Stream Methods with Unsupervised STDP-based Learning for Action Recognition
+                            </h4>
+                        </a>
+                        <p>En cours de révision en Signal Processing : Image Communication</p>
+                    </div>
+                    <div class="publication-item">
+                        <a href="https://dumas.ccsd.cnrs.fr/CRISTAL-FOX/hal-03679597v1" class="cta-link">
+                            <h4>2D versus 3D Convolutional Spiking Neural Networks Trained with Unsupervised STDP for
+                                Human Action Recognition</h4>
+                        </a>
+                        <p>IJCNN 2022 et Prix du meilleur papier CORESA 2023</p>
+                    </div>
+                    <div class="publication-item">
+                        <a href="https://arxiv.org/abs/2306.13783" class="cta-link">
+                            <h4>A Study of the Effects of Pre-processing On Action Recognition Using Spiking Neural
+                                Networks Trained with STDP</h4>
+                        </a>
+                        <p>CBMI 2021</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>My Projects</h2>
+        <div class="project-carousel">
+            <div class="project" id="project4">
+                <h3>Simulateur CSNN</h3>
+                <img src="./images/project4-sm.webp" alt="Simulateur CSNN" class="project-img">
+                <div class="project-description">
+                    Mise à jour du simulateur CSNN en C++ développé par l’équipe FOX, afin d’ajouter la capacité
+                    d’analyse vidéo aux réseaux de neurones à impulsions (SNN).
+                </div>
+            </div>
+
+            <div class="project" id="project1">
+                <h3>CHIP Visitors</h3>
+                <img src="./images/Project1-sm.webp" alt="CHIP Visitors" class="project-img">
+                <div class="project-description">
+                    Application pour l'autorisation d'accès aux bâtiments sécurisés utilisée avec succès par
+                    la municipalité de Beyrouth, améliorant la gestion des visiteurs.
+                </div>
+            </div>
+            <div class="project" id="project2">
+                <h3>GuardPro</h3>
+                <img src="./images/project4-sm.webp" alt="GuardPro" class="project-img">
+                <div class="project-description">
+                    Interface de gestion des employés augmentant l'efficacité de suivi.
+                </div>
+            </div>
+            <div class="project" id="project3">
+                <h3>ParkPro</h3>
+                <img src="./images/project3-sm.webp" alt="ParkPro" class="project-img">
+                <div class="project-description">
+                    Solution de contrôle et de gestion à distance pour barrières intelligentes.
+                </div>
+            </div>
+
+        </div>
+        <div class="carousel-buttons">
+            <button class="carousel-button prev">&#8249;</button>
+            <button class="carousel-button next">&#8250;</button>
+        </div>
+    </section>
+
+
+    <section id="contact">
+        <h2>Contactez-moi</h2>
+        <p>Je suis toujours heureuse de discuter de projets intéressants ou de répondre à vos questions. N'hésitez pas à
+            me joindre !</p>
+        <div class="contact-cards">
+            <div class="contact-card">
+                <i class="fas fa-envelope"></i>
+                <h3>Email</h3>
+                <p><a href="mailto:mireille.desprez1@gmail.com">mireille.desprez1@gmail.com</a></p>
+            </div>
+            <div class="contact-card">
+                <i class="fas fa-phone"></i>
+                <h3>Téléphone</h3>
+                <p><a href="tel:+330647820844">+33 06 47 82 08 44</a></p>
+            </div>
+            <div class="contact-card">
+                <i class="fas fa-map-marker-alt"></i>
+                <h3>Localisation</h3>
+                <p>Lille, France</p>
+            </div>
+        </div>
+        <div class="contact-cta">
+            <a href="mailto:mireille.desprez1@gmail.com" class="cta-button">Envoyez-moi un message</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Mireille DESPREZ </p>
+    </footer>
+
+    <script src="./assets/js/carousel-animation.js"></script>
+    <script src="./assets/js/about.js"></script>
+    <script src="./assets/js/main.js"></script>
+
+</body>
+
+</html>
