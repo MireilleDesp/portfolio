@@ -13,12 +13,12 @@ window.addEventListener('load', function () {
             });
         }
 
-        if (isMobile) {
-            // Get the height of the header
-            const headerHeight = header.offsetHeight;
-            // Apply the header's height as padding-top to #home
-            homeSection.style.paddingTop = headerHeight + 5 + 'px';
-        }
+        // if (isMobile) {
+        //     // Get the height of the header
+        //     const headerHeight = header.offsetHeight;
+        //     // Apply the header's height as padding-top to #home
+        //     homeSection.style.paddingTop = headerHeight + 5 + 'px';
+        // }
     }
 
 });
