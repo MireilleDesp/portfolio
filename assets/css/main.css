@@ -136,7 +136,7 @@ footer {
     nav .hamburger {
         display: block; /* Show the hamburger on small screens */
         position: absolute;
-        top: -125px;
+        top: -128px;
         right: 20px; /* Position hamburger at the top-right */
     }
 
