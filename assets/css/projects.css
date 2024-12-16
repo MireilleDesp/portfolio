@@ -20,10 +20,43 @@ h2 {
     margin: 0 auto;
 }
 
+.project-carousel::-webkit-scrollbar {
+    display: none;
+    /* Hide scrollbar for a cleaner design */
+}
+
+/* Add pseudo-elements for the fade effect */
+.project-carousel::before,
+.project-carousel::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 220px;
+    /* Adjust the fade width */
+    z-index: 2;
+    pointer-events: none;
+    /* Allow interaction with carousel content */
+}
+
+/* Fade on the left edge */
+.project-carousel::before {
+    left: 0;
+    background: linear-gradient(to right, rgba(219, 230, 255, 1), rgba(219, 230, 255, 0));
+}
+
+/* Fade on the right edge */
+.project-carousel::after {
+    right: 0;
+    background: linear-gradient(to left, rgba(219, 230, 255, 1), rgba(219, 230, 255, 0));
+}
+
+
 .project {
-    flex: 0 0 100%; /* Allow project divs to take up the entire container */
+    flex: 0 0 100%;
+    /* Allow project divs to take up the entire container */
     box-sizing: border-box;
-    padding: 40px;
+    padding: 20px 230px 20px;
     background: linear-gradient(135deg, #070553, #1d4f91);
     border-radius: 10px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
@@ -35,7 +68,8 @@ h2 {
 
 .project {
     position: relative;
-    overflow: hidden; /* Ensure the description stays within the card boundaries */
+    overflow: hidden;
+    /* Ensure the description stays within the card boundaries */
 }
 
 .project-description {
@@ -44,7 +78,8 @@ h2 {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.7); /* Dark overlay background */
+    background: rgba(0, 0, 0, 0.7);
+    /* Dark overlay background */
     color: white;
     font-size: 1.2em;
     display: flex;
@@ -53,23 +88,32 @@ h2 {
     text-align: center;
     padding: 20px;
     border-radius: 8px;
-    opacity: 0; /* Initially hidden */
-    transition: opacity 0.3s ease; /* Smooth fade-in effect */
+    opacity: 0;
+    /* Initially hidden */
+    transition: opacity 0.3s ease;
+    /* Smooth fade-in effect */
 }
 
 .project:hover .project-description {
-    opacity: 1; /* Show the description on hover */
+    opacity: 1;
+    /* Show the description on hover */
+}
+
+
+.project:hover {
+    transform: scale(1.05);
+    /* Slightly enlarge the project */
 }
 
 
 .project-img {
     width: 100%;
-    height: auto; /* Maintain the aspect ratio of the image */
-    max-width: 450px; /* Limit the width of the image */
-    max-height: 350px; /* Limit the width of the image */
+    max-height: 400px;
+    /* Limit the width of the image */
     border-radius: 8px;
     margin-bottom: 20px;
-    object-fit: contain; /* Ensure the image fits inside the container without cropping */
+    object-fit: contain;
+    /* Ensure the image fits inside the container without cropping */
 }
 
 
@@ -81,32 +125,51 @@ h2 {
 .project p {
     font-size: 1.4em;
     line-height: 1.6;
-    word-wrap: break-word; /* Ensures long words break naturally */
-    hyphens: auto; /* Enable hyphenation for better word wrapping */
+    word-wrap: break-word;
+    /* Ensures long words break naturally */
+    hyphens: auto;
+    /* Enable hyphenation for better word wrapping */
 }
 
 .carousel-buttons {
-    position: relative;
-    margin-top: 20px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    pointer-events: none;
+    /* Allow interaction with the carousel */
 }
 
 .carousel-button {
-    background-color: rgba(3, 14, 80, 0.3);
+    pointer-events: all;
+    background-color: rgba(3, 14, 80, 0.5);
     color: white;
     font-size: 2em;
     border: none;
-    padding: 10px;
-    border-radius: 50%;
+    padding: 15px;
+    border-radius: 5%;
     cursor: pointer;
-    transition: background-color 0.3s;
-    margin: 0 20px;
+    transition: background-color 0.3s ease;
 }
 
 .carousel-button:hover {
     background-color: rgba(0, 0, 0, 0.8);
 }
 
-.prev, .next {
+.carousel-buttons .prev {
+    position: absolute;
+    left: 10px;
+}
+
+.carousel-buttons .next {
+    position: absolute;
+    right: 10px;
+}
+
+.prev,
+.next {
     position: relative;
 }
 
@@ -116,25 +179,36 @@ h2 {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    #projects {
-        padding: 30px 0;
+
+    /* Add pseudo-elements for the fade effect */
+    .project-carousel::before,
+    .project-carousel::after {
+       
+        width: 70px;
+        /* Adjust the fade width */
+        z-index: 1;
+      
     }
 
     .project {
-        flex: 0 0 90%; /* Make the projects a bit smaller on mobile */
-        padding: 20px;
+        padding: 5px 75px 5px;
     }
+    
 
     .carousel-button {
-        font-size: 1.5em; /* Smaller buttons for mobile */
+        font-size: 1.5em;
+        /* Smaller buttons for mobile */
         padding: 8px;
     }
 
     h2 {
-        font-size: 2em; /* Smaller heading on mobile */
+        font-size: 1em;
+        /* Smaller heading on mobile */
     }
 
     .project-img {
-        max-height: 200px; /* Make the image smaller on mobile */
+        min-height: 300px;
+        max-height: 700px;
     }
+
 }
