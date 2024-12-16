@@ -34,7 +34,7 @@ h2 {
     bottom: 0;
     width: 220px;
     /* Adjust the fade width */
-    z-index: 2;
+    z-index: 5;
     pointer-events: none;
     /* Allow interaction with carousel content */
 }
@@ -56,17 +56,14 @@ h2 {
     flex: 0 0 100%;
     /* Allow project divs to take up the entire container */
     box-sizing: border-box;
-    padding: 20px 230px 20px;
+    padding: 20px 230px 20px 230px;
     background: linear-gradient(135deg, #070553, #1d4f91);
     border-radius: 10px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
     color: white;
     transition: transform 0.5s ease;
     max-width: 100%;
-    text-align: left;
-}
-
-.project {
+    text-align: center;
     position: relative;
     overflow: hidden;
     /* Ensure the description stays within the card boundaries */
@@ -86,7 +83,7 @@ h2 {
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 20px;
+    /* padding: 20px; */
     border-radius: 8px;
     opacity: 0;
     /* Initially hidden */
@@ -107,13 +104,17 @@ h2 {
 
 
 .project-img {
-    width: 100%;
-    max-height: 400px;
+    height: 300px;
+    max-width: 400px;
     /* Limit the width of the image */
     border-radius: 8px;
-    margin-bottom: 20px;
     object-fit: contain;
     /* Ensure the image fits inside the container without cropping */
+}
+
+.project-clear-description{
+    width: 400px;
+    height: 100px;
 }
 
 
@@ -183,17 +184,17 @@ h2 {
     /* Add pseudo-elements for the fade effect */
     .project-carousel::before,
     .project-carousel::after {
-       
-        width: 70px;
+
+        width: 50px;
         /* Adjust the fade width */
         z-index: 1;
-      
+
     }
 
     .project {
-        padding: 5px 75px 5px;
+        padding: 10px 75px 20px 65px;
     }
-    
+
 
     .carousel-button {
         font-size: 1.5em;
@@ -201,14 +202,21 @@ h2 {
         padding: 8px;
     }
 
-    h2 {
+
+    h3 {
         font-size: 1em;
+        margin-bottom: 8px;
         /* Smaller heading on mobile */
     }
 
     .project-img {
-        min-height: 300px;
-        max-height: 700px;
+        max-height: 230px;
+        width: 300px;
+    }
+
+    .project-clear-description{
+        width: 300px;
+        height: 100px;
     }
 
 }
